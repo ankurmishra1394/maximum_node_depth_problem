@@ -1,5 +1,7 @@
 
-# Create a method, which takes a root node as input, and Calculate the Sum of all node depths in the Binary Tree. Depth of root node is 0 and it increments at every next level, Every node at same level has same depth.
+# Binary Tree Problem 
+
+Create a method, which takes a root node as input, and Calculate the Sum of all node depths in the Binary Tree. Depth of root node is 0 and it increments at every next level, Every node at same level has same depth.
 
 
 # Input Samples:
