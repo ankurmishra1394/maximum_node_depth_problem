@@ -7,7 +7,7 @@ class BinaryTree:
 
 max_node_depth = 0
 
-def BinaryTreeNodeDepthSum(root, current_depth=0):
+def calculateDepthSum(root, current_depth=0):
     if root is None:
         return
 
@@ -16,13 +16,13 @@ def BinaryTreeNodeDepthSum(root, current_depth=0):
     current_depth +=1
     max_node_depth += current_depth
 
-    BinaryTreeNodeDepthSum(root.left, current_depth)
-    BinaryTreeNodeDepthSum(root.right, current_depth)
+    calculateDepthSum(root.left, current_depth)
+    calculateDepthSum(root.right, current_depth)
 
-def getDepthSum(root):
+def BinaryTreeNodeDepthSum(root):
     if root:
-        BinaryTreeNodeDepthSum(root.left)
-        BinaryTreeNodeDepthSum(root.right)
+        calculateDepthSum(root.left)
+        calculateDepthSum(root.right)
     return max_node_depth
 
 def search(root, value):
@@ -72,5 +72,5 @@ input_tree = {
 
 root = generate_binart_tree(input_tree)
 # print_tree(root)
-getDepthSum(root)
+BinaryTreeNodeDepthSum(root)
 print("Maximum Nodes's Depth is {}".format(max_node_depth))
